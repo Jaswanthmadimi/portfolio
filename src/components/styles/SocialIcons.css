@@ -8,14 +8,16 @@
   transform: translateX(-50%);
 }
 .social-icons {
-  position: absolute;
-  left: -20px;
-  bottom: 20px;
-  display: none;
-  flex-direction: column;
-  gap: 8px;
-  z-index: 999;
   padding: 10px;
+}
+@media screen and (max-width: 768px) {
+  .social-icons {
+    display: flex;
+    flex-direction: row;
+    left: 10px;
+    bottom: 10px;
+    padding: 5px;
+  }
 }
 .social-icons:hover {
   transition: 0.3s;
@@ -26,10 +28,13 @@
   /* transform: scale(1.2); */
 }
 .social-icons span {
-  width: 50px;
-  height: 50px;
-  position: relative;
   display: flex;
+}
+@media screen and (max-width: 768px) {
+  .social-icons span {
+    width: 40px;
+    height: 40px;
+  }
 }
 .social-icons a {
   --siLeft: 50%;
@@ -61,6 +66,15 @@
   transition: 0.5s;
   transform-origin: left bottom;
   transform: translateX(100%) rotateZ(-90deg);
+}
+@media screen and (max-width: 768px) {
+  .resume-button {
+    transform: none;
+    right: 15px;
+    bottom: 20px;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
 }
 .resume-button:hover {
   color: #fff;
