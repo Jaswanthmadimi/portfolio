@@ -112,14 +112,16 @@
 }
 @media screen and (max-width: 768px) {
   .character-model {
-    height: 60vh;
-    bottom: 15vh;
+    height: 55vh;
+    max-height: 420px;
+    bottom: 0;
   }
 }
 @media screen and (max-width: 480px) {
   .character-model {
-    height: 40vh;
-    bottom: 25vh;
+    height: 50vh;
+    max-height: 360px;
+    bottom: 0;
   }
 }
 .character-model::after {
@@ -194,11 +196,13 @@
   line-height: 28px;
   font-weight: 500;
   font-family: "Geist", sans-serif;
+  word-break: break-word;
 }
 @media screen and (max-width: 480px) {
   .landing-intro h1 {
-    font-size: 24px;
-    line-height: 26px;
+    font-size: clamp(1.1rem, 5.5vw, 24px);
+    line-height: 1.2;
+    word-break: break-word;
   }
 }
 
@@ -409,5 +413,57 @@ h2.landing-info-h2 {
   }
   h2.landing-info-h2 {
     font-size: 75px;
+  }
+}
+
+/* ── Mobile hero: cap character height, fix dead black space ── */
+@media screen and (max-width: 768px) {
+  /* Landing section: use auto height so it doesn't lock to 100vh with huge empty space */
+  .landing-section {
+    height: auto;
+    min-height: 100svh;
+  }
+
+  /* Outer character wrapper — cap so the canvas never grows past the screen */
+  .character-container {
+    height: 55vh;
+    max-height: 420px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Intro text pushes above the character on narrow screens */
+  .landing-intro {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    padding: 90px 0 12px;
+    z-index: 10;
+  }
+
+  /* Prevent name overflow on narrow screens */
+  .landing-intro h1 {
+    font-size: clamp(1rem, 5.5vw, 26px);
+    line-height: 1.25;
+    word-break: break-word;
+    white-space: normal;
+  }
+
+  .landing-intro h2 {
+    font-size: clamp(0.9rem, 3.5vw, 18px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .character-container {
+    height: 50vh;
+    max-height: 360px;
+  }
+
+  .landing-intro {
+    padding-top: 80px;
   }
 }
