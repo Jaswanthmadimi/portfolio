@@ -575,6 +575,9 @@
   background: transparent;
   overflow: hidden;
   font-family: "Inter", "Roboto", sans-serif;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ── Heading ── */
@@ -596,7 +599,7 @@
   margin: 0;
   position: relative;
   display: inline-block;
-  text-shadow: 4px 4px 0px rgba(244, 63, 94, 0.8), -4px -4px 0px rgba(56, 189, 248, 0.8);
+  text-shadow: 2px 2px 0 rgba(244,63,94,0.5);
 }
 
 .sk4-heading-sub {
@@ -629,6 +632,8 @@
   transition: background 0.4s ease, border-color 0.4s ease;
   overflow: hidden;
   position: relative;
+  margin-bottom: 30px;
+  border-radius: 12px;
 }
 
 .sk4-category-row:hover {
@@ -702,6 +707,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-start;
   padding: 24px 30px;
   gap: 16px;
   flex: 1;
@@ -713,10 +719,12 @@
 
 .sk4-skill-node {
   display: inline-block;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.7);
-  padding: 8px 16px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  letter-spacing: 0.5px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid transparent;
   cursor: crosshair;
@@ -727,34 +735,15 @@
 }
 
 .sk4-skill-node::after {
-  content: attr(data-hover);
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f43f5e;
-  color: #fff;
-  font-weight: 900;
-  font-family: "Fira Code", monospace;
-  opacity: 0;
-  transform: translateY(100%) rotateX(-90deg);
-  transform-origin: bottom;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  pointer-events: none;
+  display: none; /* disable flip content */
 }
 
 .sk4-skill-node:hover {
-  color: transparent;
-  border-color: rgba(244, 63, 94, 0.5);
-  box-shadow: 0 10px 30px rgba(244, 63, 94, 0.2);
-  transform: translateY(-4px);
-}
-
-.sk4-skill-node:hover::after {
-  opacity: 1;
-  transform: translateY(0) rotateX(0deg);
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.08);
+  color: rgba(255, 255, 255, 0.9);
+  border-color: transparent;
+  box-shadow: none;
 }
 
 /* ── Responsive ── */
@@ -771,8 +760,7 @@
     justify-content: flex-start;
   }
   .sk4-cat-icon { margin-bottom: 0; }
-  .sk4-skills-list { padding: 20px; }
-  .sk4-skill-node { font-size: 15px; }
+  .sk4-skills-list { padding: 20px; justify-content: flex-start; gap: 10px; }
 }
 
 @media (max-width: 480px) {
