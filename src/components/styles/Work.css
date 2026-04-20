@@ -787,3 +787,17 @@
   .sk4-skills-list { padding: 14px; gap: 10px; }
   .sk4-skill-node { font-size: 12px; padding: 5px 10px; }
 }
+
+/* ── Mobile: force all work/skills elements visible ──
+   GSAP starts work-card, sk4-* elements at opacity:0.
+   On real mobile ScrollTrigger may not fire → invisible sections. */
+@media only screen and (max-width: 1024px) {
+  .work-card,
+  .sk4-heading-glitch,
+  .sk4-category-row,
+  .sk4-skill-node,
+  .achievement-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

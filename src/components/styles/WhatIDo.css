@@ -408,3 +408,11 @@
     padding: 20px;
   }
 }
+
+/* ── Mobile: force what-box-in visible — GSAP won't reveal it if 3D hasn't loaded ── */
+@media only screen and (max-width: 1024px) {
+  .what-box-in {
+    display: flex !important;
+    opacity: 1 !important;
+  }
+}

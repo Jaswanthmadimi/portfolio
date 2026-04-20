@@ -83,3 +83,18 @@
     font-size: clamp(1rem, 5vw, 22px);
   }
 }
+
+/* ── Mobile: force about section fully visible ──
+   GsapScroll fades .about-section to opacity:0 in desktop scroll sequence.
+   On mobile it never recovers. */
+@media only screen and (max-width: 1024px) {
+  .about-section {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .about-me {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+

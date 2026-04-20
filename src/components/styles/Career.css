@@ -235,3 +235,11 @@
     font-size: 13px;
   }
 }
+
+/* ── Mobile: force sections visible — GSAP starts them at opacity:0 ── */
+@media only screen and (max-width: 1024px) {
+  .career-info-box,
+  .career-timeline {
+    opacity: 1 !important;
+  }
+}
