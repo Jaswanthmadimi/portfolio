@@ -115,3 +115,20 @@ div.resume-button span {
     margin-top: -1.5px;
   }
 }
+
+/* ── Touch-target minimum 44px & ultra-small screen ── */
+@media only screen and (max-width: 400px) {
+  .social-icons span {
+    width: 44px;
+    height: 44px;
+  }
+  .social-icons a {
+    font-size: 20px;
+  }
+  .resume-button {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    right: 10px;
+    bottom: 15px;
+  }
+}

@@ -37,6 +37,42 @@ body {
   overflow: hidden;
 }
 
+/* ── Responsive images ─────────────────────── */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ── GPU-accelerated animated elements ──────── */
+.landing-circle1,
+.landing-circle2,
+.character-rim,
+.loading-wrap,
+.career-dot {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+/* ── View Transition timing ──────────────────── */
+::view-transition-group(*),
+::view-transition-old(*),
+::view-transition-new(*) {
+  animation-duration: 0.25s;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* ── Accessibility: reduced motion ──────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: inherit;
@@ -105,5 +141,12 @@ body {
 @media screen and (min-width: 768px) {
   body {
     --cWidth: 94%;
+  }
+}
+
+/* ── Extra-small screens (≤360px) ───────────── */
+@media screen and (max-width: 360px) {
+  body {
+    --cWidth: calc(100% - 20px);
   }
 }

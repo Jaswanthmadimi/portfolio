@@ -62,7 +62,7 @@ export const config = {
             title: "Keylogger Analyzer Tool",
             category: "Security",
             technologies: "Android Studio, JavaScript, Dart, Flutter, Windows OS telemetry",
-            image: "/images/project-1.webp",
+            image: "/images/keylogger.png",
             description: "A cross-platform keylogger detection utility that identifies unauthorized surveillance software. Analyzes running processes in real-time against known malicious signatures. Provides automated threat alerts with tamper-evident logging."
         },
         {
@@ -70,7 +70,7 @@ export const config = {
             title: "Sentiment Analysis on Twitter",
             category: "AI/ML",
             technologies: "Python, NLP, BERT/RoBERTa, FastAPI, React.js, MongoDB",
-            image: "/images/project-3.webp",
+            image: "/images/sentiment.png",
             description: "An NLP-powered tool that classifies tweet sentiment in real-time using BERT/RoBERTa models. Exposes results through a FastAPI backend consumed by a React.js dashboard. Stores analysis history and trends in a MongoDB collection."
         },
         {
@@ -78,7 +78,7 @@ export const config = {
             title: "Endpoint Detection & Response",
             category: "Security",
             technologies: "PowerShell, JavaScript, HTTP API, Windows Telemetry",
-            image: "/images/project-1.webp",
+            image: "/images/endpoint.png",
             description: "An EDR system that collects, analyzes, and centrally monitors endpoint telemetry via HTTP-based communication. Detects suspicious activity using PowerShell scripts and a JavaScript dashboard. Suitable for real-world enterprise security demonstrations."
         }
     ],

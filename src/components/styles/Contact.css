@@ -11,7 +11,7 @@
   justify-content: flex-start;
 }
 .contact-section h3 {
-  font-size: 60px;
+  font-size: clamp(1.6rem, 5vw, 60px);
   font-weight: 400;
   text-transform: uppercase;
   margin: 0;
@@ -96,5 +96,30 @@ a.contact-social {
   }
   .contact-container {
     width: calc(100% - 25px);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .contact-section h3 {
+    font-size: clamp(1.4rem, 8vw, 32px);
+    margin-bottom: 24px;
+  }
+  a.contact-social {
+    font-size: 18px;
+  }
+  .contact-box h2 {
+    font-size: 16px;
+  }
+  .contact-section {
+    padding-bottom: 80px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .contact-section h3 {
+    font-size: clamp(1.2rem, 7vw, 26px);
+  }
+  .contact-box h5 {
+    font-size: 16px;
   }
 }

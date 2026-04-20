@@ -49,8 +49,7 @@ const SkillsSection = ({ ss }: { ss: any }) => {
 
       {/* Brutalist Heading */}
       <div className="sk4-heading-container">
-        <h3 className="sk4-heading-glitch" data-text="SYSTEM_ARSENAL">SYSTEM_ARSENAL</h3>
-        <span className="sk4-heading-sub">// EXPERTISE / {ss.categories.length} MODULES ONLINE</span>
+        <h3 className="sk4-heading-glitch" data-text="SKILLS">SKILLS</h3>
         <div className="sk4-heading-divider"></div>
       </div>
 
@@ -63,7 +62,6 @@ const SkillsSection = ({ ss }: { ss: any }) => {
                 <div className="sk4-cat-icon">{cat.icon}</div>
                 <div className="sk4-cat-label-wrap">
                   <span className="sk4-cat-label">{cat.label.toUpperCase()}</span>
-                  <span className="sk4-cat-count">// [{cat.items.length}]</span>
                 </div>
               </div>
 

@@ -4,7 +4,7 @@
 }
 
 .work-section .title {
-  font-size: 70px;
+  font-size: clamp(2rem, 6vw, 70px);
   font-weight: 500;
   margin-bottom: 40px;
   margin-top: 0;
@@ -26,7 +26,7 @@
 
 .work-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
   gap: 24px;
   width: 100%;
 }
@@ -189,10 +189,40 @@
 
 @media only screen and (max-width: 1025px) {
   .work-cards-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
   }
   .work-section .title {
-    font-size: 50px;
+    font-size: clamp(1.8rem, 5vw, 50px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .work-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .work-section .title {
+    font-size: clamp(1.5rem, 8vw, 40px);
+    margin-bottom: 24px;
+  }
+  .work-card-body {
+    padding: 14px 16px;
+  }
+  .work-card-title {
+    font-size: 18px;
+  }
+  .achievements-title {
+    font-size: clamp(1.2rem, 5vw, 26px);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .work-section {
+    padding-bottom: 60px;
+  }
+  .achievement-card {
+    padding: 14px 16px;
+    gap: 12px;
   }
 }
 
@@ -557,7 +587,7 @@
 }
 
 .sk4-heading-glitch {
-  font-size: 80px;
+  font-size: clamp(2rem, 8vw, 80px);
   font-weight: 900;
   text-transform: uppercase;
   color: #fff;
@@ -729,7 +759,7 @@
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
-  .sk4-heading-glitch { font-size: 50px; }
+  .sk4-heading-glitch { font-size: clamp(2rem, 6vw, 50px); }
   .sk4-category-row { flex-direction: column; }
   .sk4-category-sidebar { 
     width: 100%; 
@@ -746,6 +776,14 @@
 }
 
 @media (max-width: 480px) {
-  .sk4-heading-glitch { font-size: 36px; }
+  .sk4-heading-glitch { font-size: clamp(1.6rem, 9vw, 36px); }
   .sk4-skill-node { font-size: 13px; padding: 6px 12px; }
+  .sk4-heading-container { padding-left: 14px; }
+}
+
+@media (max-width: 380px) {
+  .sk4-heading-glitch { font-size: clamp(1.4rem, 8vw, 30px); }
+  .sk4-category-sidebar { padding: 14px; }
+  .sk4-skills-list { padding: 14px; gap: 10px; }
+  .sk4-skill-node { font-size: 12px; padding: 5px 10px; }
 }
