@@ -3,6 +3,9 @@ import "./styles/Cursor.css";
 import gsap from "gsap";
 
 const Cursor = () => {
+  // No custom cursor on touch/mobile devices
+  if (typeof window !== "undefined" && window.innerWidth < 1025) return null;
+
   const cursorRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     let hover = false;
