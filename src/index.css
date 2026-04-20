@@ -158,15 +158,11 @@ body {
   }
 }
 
-/* ── Mobile performance: reduce expensive blur/shadows ── */
+/* ── Mobile performance: hide heavy decorative elements ── */
 @media screen and (max-width: 1024px) {
   .landing-circle1,
-  .landing-circle2 {
-    filter: blur(30px);
-    width: 200px;
-    height: 200px;
-  }
+  .landing-circle2,
   .character-rim {
-    filter: blur(25px);
+    display: none;
   }
 }
