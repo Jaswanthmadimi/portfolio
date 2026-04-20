@@ -82,13 +82,13 @@ a.contact-social {
 @media only screen and (max-width: 900px) {
   .contact-flex {
     flex-direction: column;
-    gap: 40px;
+    gap: 32px;
   }
   .contact-flex p {
     margin-bottom: 0px;
   }
   .contact-flex h4 {
-    margin-top: 20px;
+    margin-top: 16px;
   }
   .contact-section {
     margin-top: 50px;
@@ -96,6 +96,14 @@ a.contact-social {
   }
   .contact-container {
     width: calc(100% - 25px);
+  }
+  .contact-box {
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .contact-box:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
   }
 }
 
@@ -121,5 +129,14 @@ a.contact-social {
   }
   .contact-box h5 {
     font-size: 16px;
+  }
+}
+
+/* ── Mobile: force contact visible — GSAP opacity:0 not resolved ── */
+@media only screen and (max-width: 1024px) {
+  .contact-section h3,
+  .contact-box {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
