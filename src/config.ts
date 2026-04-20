@@ -177,16 +177,16 @@ export const config = {
     },
     skills: {
         develop: {
-            title: "DEVELOPER",
-            description: "Software and Web Development",
-            details: "Building secure and efficient software solutions with a focus on web technologies and cybersecurity.",
-            tools: ["Python", "Git", "Android Studio", "Postman"]
+            title: "Cybersecurity & Security Engineering",
+            description: "Security engineer mindset & threat analysis",
+            details: "Ethical hacking & vulnerability assessment (CEH track). Network security, intrusion detection (Snort), threat analysis. SIEM basics (Splunk / ELK) & log monitoring. Building and testing secure systems.",
+            tools: ["CEH", "Snort", "Splunk", "ELK", "Threat Analysis"]
         },
         design: {
-            title: "DESIGN",
-            description: "UI/UX and Frontend Design",
-            details: "Creating clean and user-friendly interfaces.",
-            tools: ["Visual Studio Code", "Android Studio", "Postman"]
+            title: "Full-Stack Development & Security Tools",
+            description: "Focus on real-world, practical applications",
+            details: "Building web apps using React + Flask. Developing security tools (scanner, brute-force simulator, IDS). REST APIs, database integration, and deployment.",
+            tools: ["React", "Flask", "REST APIs", "Security Tools"]
         }
     }
 };
